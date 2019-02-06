@@ -1,0 +1,58 @@
+/* -------------------------- */
+/*     - INTRO SECTION -                           
+/* -------------------------- */
+
+// Main section intro wrapper
+.section-intro {
+    min-height: 60vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+// Intro content wrapper (text)
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+
+    // Heading
+    &__heading {
+
+    }
+    // Text
+    &__text {
+        color: $color-gray-dark-4;
+        font-size: 1.4rem;
+        padding: 2rem 6rem 0 6rem;
+        line-height: 2.6rem;
+    }
+    // Button
+    &__button {
+        margin-top: 2rem;
+    }
+}
+
+// Intro Image Wrapper
+.intro-image {
+    position: relative;
+    width: 50%;
+    // Image
+    &__img {
+        height: 60%;
+        width: auto;
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        box-shadow: 0 1rem 4rem rgba($color-black, .50);
+        transition: all .2s ease-in-out;
+        outline-offset: 1.6rem;
+        &:hover {
+            outline: 1rem solid $color-primary;
+            transform: scale(1.05) translateY(-0.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .50);
+        }
+    }
+}

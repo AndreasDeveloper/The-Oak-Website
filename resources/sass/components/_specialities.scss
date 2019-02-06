@@ -1,0 +1,94 @@
+/* -------------------------- */
+/*    - SPECIALITIES MENU -                           
+/* -------------------------- */
+
+// Main Specialities section wrapper
+.specialities-section {
+    position: relative;
+    background: $color-gray-4;
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+    // Heading
+    &__heading {
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 500;
+        letter-spacing: .15rem;
+        display: flex;
+        justify-content: center;
+        padding-top: 6rem;
+    }
+    &__sub-heading {
+        font-size: 1.3rem;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+    // * --- MEADIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-largest-5) { min-height: 60vh; }
+    @media only screen and (max-width: $bp-medium) { min-height: 70vh; }
+}
+
+// Specialities block 
+.special-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 5%;
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; // Only works with columns!
+    }
+}
+
+// --- COMMON PROPERTIES --- \\
+// Column properties --
+.column-1, .column-2, .column-3 { 
+    background-color: $color-white;
+    min-height: 50rem;
+    width: 25%;
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        width: 80%;
+    }
+}
+// Text Blocks --
+.c1-text-block, .c2-text-block, .c3-text-block {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // Text Blocks | Heading, Paragraph, Price
+    &__heading { padding-bottom: 1.2rem; }
+    &__text { padding-bottom: 1.2rem; color: $color-gray-dark-7; }
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        height: 30%;
+    }
+}
+// Image Blocks --
+.c1-image-block, .c2-image-block, .c3-image-block {
+    @include img-setup;
+    height: 60%;
+    width: 100%;
+    display: flex; 
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        height: 100%;
+    }
+}
+
+// -- COLUMN 1 -- \\
+.c1-image-block { background-image: linear-gradient(rgba($color-gray-dark-3, .20), rgba($color-gray-dark-3, .40)), url(../img/menu-1.jpeg); }
+// -- COLUMN 2 -- \\
+.c2-text-block { background-color: $color-white; }
+.c2-image-block { background-image: linear-gradient(rgba($color-gray-dark-3, .20), rgba($color-gray-dark-3, .40)), url(../img/menu-2.jpeg); }
+// -- COLUMN 3 -- \\
+.c3-image-block { background-image: linear-gradient(rgba($color-gray-dark-3, .20), rgba($color-gray-dark-3, .40)), url(../img/menu-3.jpeg); }

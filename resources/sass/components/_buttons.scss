@@ -35,4 +35,8 @@
         color: $color-white;
         .btn-2__arrow { padding-left: 1rem; }
     }
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        padding: .8rem;
+    }
 }

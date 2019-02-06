@@ -2,7 +2,7 @@
 /*       - BUTTONS -                           
 /* -------------------------- */
 
-// -- BUTTON STYLE #1 - Ghost -- \\
+// -- BUTTON STYLE #1 - Ghost White -- \\
 .btn {
     display: inline;
     font-size: 1.4rem;
@@ -18,7 +18,7 @@
     }
 }
 
-// -- BUTTON STYLE #2 - Filled -- \\
+// -- BUTTON STYLE #2 - Ghost Black -- \\
 .btn-2 {
     align-self: center;
     display: inline;
@@ -39,4 +39,15 @@
     @media only screen and (max-width: $bp-small) {
         padding: .8rem;
     }
+}
+
+// -- BUTTON STYLE #3 - Filled -- \\
+.btn-3 {
+    display: inline;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: $color-white;
+    padding: 1.2rem;
+    background-color: $color-primary;
 }

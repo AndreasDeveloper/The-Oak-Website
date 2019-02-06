@@ -140,3 +140,45 @@
     color: $color-gray-dark-6;
     padding-top: 2rem;
 }
+
+/* -------------------------- */
+/*   - VIEW MENU SECTION -                           
+/* -------------------------- */
+
+.viewm-section {
+    height: 70vh;
+    position: relative;
+    background-image: linear-gradient(rgba($color-gray-dark-3, .50), rgba($color-gray-dark-3, .60)), url(../img/bk-1.jpeg);
+    @include img-setup;
+    background-attachment: scroll;
+    // Flexbox
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Content wrapper
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) { margin: 0 auto; padding: 0 2rem; }
+        // Heading
+        &__heading {
+            font-size: 4.5rem;
+            font-weight: 400;
+            letter-spacing: .2rem;
+            color: $color-white;
+        }
+        // Button
+        &__button {
+            margin-top: 3rem;
+            transition: all .1s ease-in-out;
+            // On Hover
+            &:hover {
+                background-color: $color-primary-light;
+            }
+        }
+    }
+}

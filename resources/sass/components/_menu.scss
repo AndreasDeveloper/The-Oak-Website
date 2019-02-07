@@ -24,6 +24,7 @@
         margin: 0 auto;
         width: 100%;
     }
+    @media only screen and (max-width: $bp-vsmall-4) { padding: 5rem 5rem 1rem 2rem; }
 }
 .menu-block-2 { 
     float: right; 
@@ -37,6 +38,7 @@
         margin: 0 auto;
         width: 100%;
     }
+    @media only screen and (max-width: $bp-vsmall-4) { padding: 5rem 5rem 5rem 2rem; }
 }
 // Inner content div
 .menu-block-content-1 { width: 100%; }
@@ -131,7 +133,12 @@
         }
         // * --- MEDIA QUERIES --- * \\
         @media only screen and (max-width: $bp-largest-5) { margin-left: 31%; }
-        // Description Text
-        &__itemDesc {  }
     }
+}
+
+.itemMain2 {
+    margin-left: 2%;
+
+    @media only screen and (max-width: $bp-desktop) { margin-left: -1%; }
+    @media only screen and (max-width: $bp-medium) { margin-left: -2%; }
 }

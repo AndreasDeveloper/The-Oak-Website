@@ -50,4 +50,8 @@
     color: $color-white;
     padding: 1.2rem;
     background-color: $color-primary;
+    // On Hover
+    &:hover {
+        background-color: $color-primary-light;
+    }
 }

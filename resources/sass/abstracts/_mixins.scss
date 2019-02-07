@@ -5,7 +5,11 @@
     &::after {
         content: "";
         display: table;
-        clear: both;
+        //clear: both;
+    }
+    &::before {
+        content: "";
+        display: table;
     }
 }
 

@@ -11,14 +11,14 @@
 }
 
 // ** --- Menu block-1 --- ** \\\
-.menu-block-1, .menu-block-2 { width: 50%; }
-.menu-block-1 { 
+.menu-block-1, .menu-block-2, .menu-block-3, .menu-block-4 { width: 50%; overflow: hidden; }
+.menu-block-1, .menu-block-3 { 
     float: left; 
     padding: 5rem 0 5rem 25rem; 
     // * --- MEDIA QUERIES --- * \\
     @media only screen and (max-width: $bp-desktop) { padding: 5rem 0 5rem 15rem; }
     @media only screen and (max-width: $bp-largest-5) { padding: 5rem 0 5rem 8rem; }
-    @media only screen and (max-width: $bp-medium) { padding: 5rem 0 5rem 10rem; }
+    @media only screen and (max-width: $bp-medium) { padding: 5rem 0 5rem 8rem; }
     @media only screen and (max-width: $bp-small) {
         padding: 0 4rem;
         margin: 0 auto;
@@ -26,7 +26,7 @@
     }
     @media only screen and (max-width: $bp-vsmall-4) { padding: 5rem 5rem 1rem 2rem; }
 }
-.menu-block-2 { 
+.menu-block-2, .menu-block-4 { 
     float: right; 
     padding: 5rem 15rem 5rem 15rem; 
     // * --- MEDIA QUERIES --- * \\
@@ -136,9 +136,15 @@
     }
 }
 
+// --- ADDITIONALS --- \\
 .itemMain2 {
     margin-left: 2%;
-
     @media only screen and (max-width: $bp-desktop) { margin-left: -1%; }
     @media only screen and (max-width: $bp-medium) { margin-left: -2%; }
+}
+
+.pp {
+    @media only screen and (max-width: $bp-small) {
+        padding-right: 5rem;
+    }
 }

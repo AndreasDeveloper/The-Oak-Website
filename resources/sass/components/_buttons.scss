@@ -33,8 +33,9 @@
     &:hover {
         background-color: $color-black;
         color: $color-white;
-        .btn-2__arrow { padding-left: 1rem; }
+        span { margin-left: .8rem; }
     }
+    &__arrow { margin-left: .3rem; transition: margin-left .2s; }
     // * --- MEDIA QUERIES --- * \\
     @media only screen and (max-width: $bp-small) {
         padding: .8rem;

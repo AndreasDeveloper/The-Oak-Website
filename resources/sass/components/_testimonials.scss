@@ -1,0 +1,77 @@
+/* -------------------------- */
+/*      - TESTIMONIALS -                           
+/* -------------------------- */
+
+// Main testimonials wrapper
+.section-testimonials {
+    min-height: 50vh;
+    flex: 1; // Occupy all of the remaining space
+    display: flex;
+    flex-direction: row;
+    align-items: center;    // Fixes the length of border bottom
+    &__heading {
+        font-size: 3.5rem;
+        font-weight: 400;
+        letter-spacing: .2rem;
+        text-align: center;
+        margin-top: 5%;
+    }
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) { flex-direction: column; }
+}
+
+.review {
+    background-color: $color-white;
+    box-shadow: $color-gray-1;
+    padding: 3rem;
+    margin: 5rem 5rem 3.5rem 5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem rgba($color-black, .20);
+    transition: all .2s ease-in-out;
+    // --- MEDIA QUERIES --- \\
+    @media only screen and (max-width: $bp-medium) { padding: 2rem; margin: 5rem 3rem 0 3rem; }
+    &__text {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
+    }
+    &__user { display: flex; align-items: center; }
+    &__image {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+    &__user-box { margin-right: auto; } // Pushes rating to the right side while user info is intact
+    &__user-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: .4rem;
+    }
+    &__user-date { font-size: 1rem; color: $color-gray-dark-2; }
+    &__rating {
+        color: $color-primary;
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+    // Quotation symbol setup as before
+    &::before {
+        content: "\201C"; // Open quote symbol
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: $color-gray-4;
+        font-family: sans-serif;
+        z-index: 1;
+    }
+    // On Hover
+    &:hover {
+        transform: scale(1.03);
+    }
+    // First review is bigger than others
+    &--1 { padding: 7rem; font-size: 1.2rem; }
+}

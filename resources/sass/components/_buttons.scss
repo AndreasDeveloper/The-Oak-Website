@@ -55,3 +55,62 @@
         background-color: $color-primary-light;
     }
 }
+
+
+// -- CLOSE BUTTON -- \\
+.close-container {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    float: right;
+    margin: -5rem 5rem 0 0;
+    cursor: pointer;
+    z-index: 5;
+    display: block;
+    // Make it fixed
+    > div, label { position: fixed; }
+  }
+  
+  .leftright {
+    height: .4rem;
+    width: 5rem;
+    position: absolute;
+    margin-top: 2.4rem;
+    background-color: $color-white;
+    border-radius: .2rem;
+    transform: rotate(45deg);
+    transition: all .3s ease-in;
+  }
+  
+  .rightleft {
+    height: .4rem;
+    width: 5rem;
+    position: absolute;
+    margin-top: 2.4rem;
+    background-color: $color-white;
+    border-radius: .2rem;
+    transform: rotate(-45deg);
+    transition: all .3s ease-in;
+  }
+  
+  label {
+    color: $color-white;
+    font-family: Helvetica, Arial, sans-serif; 
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    transition: all .3s ease-in;
+    opacity: 0;
+  }
+  .close { margin: 6rem 0 0 .5rem; position: absolute; }
+  .close-container:hover .leftright {
+    transform: rotate(-45deg);
+    background-color: $color-primary;
+  }
+  .close-container:hover .rightleft {
+    transform: rotate(45deg);
+    background-color: $color-primary;
+  }
+  .close-container:hover label { opacity: 1; }
+  
+  

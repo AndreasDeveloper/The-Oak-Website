@@ -11,10 +11,12 @@
 // - COMPONENTS - \\
 @import './components/buttons';
 @import './components/gallery';
+@import './components/g-maps';
 @import './components/menu';
 @import './components/specialities';
 @import './components/testimonials';
 // - LAYOUT - \\
+@import './layout/contact';
 @import './layout/_header';
 // - PAGES - \\
 @import './pages/home';

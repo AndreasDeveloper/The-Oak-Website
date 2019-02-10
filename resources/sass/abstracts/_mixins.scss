@@ -60,6 +60,24 @@
     }
 }
 
+// -- UNDERLINE 2 -- \\
+@mixin underline-2 {
+    &::after {
+        display: block;
+        height: .3rem;
+        background-color: $color-primary-dark;
+        content: "";
+        width: 4rem;
+        margin-top: 2.4rem;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-vsmall-5) {
+            margin-top: 1.4rem;
+            width: 8rem;
+        }
+    }
+}
+
 /* ------------------------------------------- */
 /* MIXIN FOR POSITIONING THE TEXT IN SLIDER
 /* ------------------------------------------- */

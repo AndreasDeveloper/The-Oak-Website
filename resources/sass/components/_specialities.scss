@@ -18,6 +18,7 @@
         display: flex;
         justify-content: center;
         padding-top: 6rem;
+        @media only screen and (max-width: $bp-small) { font-size: 2.8rem; }
     }
     &__sub-heading {
         font-size: 1.3rem;

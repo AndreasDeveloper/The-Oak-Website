@@ -1,0 +1,97 @@
+/* -------------------------- */
+/*        - CONTACT -                           
+/* -------------------------- */
+
+// Main section wrapper
+.contact {
+    position: relative;
+    margin-top: 15%;
+    min-height: 60vh;
+    z-index: 10;
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-medium) { min-height: 40vh; }
+}
+
+// Content wrapper
+.contact-box {
+    background-color: $color-white;
+    box-shadow: 0 .5rem 1rem rgba($color-black, .20);
+    margin: 0 20rem;
+    padding: 3rem 5rem;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 5vw);
+    grid-template-columns: repeat(auto-fit, 1fr);
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) { margin: 0; }
+    // Left side content
+    &__left {
+        display: flex;
+        flex-direction: column;
+        grid-row: 1 / span 4;
+        grid-column: 1 / span 2;
+        @media only screen and (max-width: $bp-medium) { padding-right: 3rem; }
+        // Heading
+        &__heading {
+            font-size: 3rem;
+            font-weight: 400;
+            @media only screen and (max-width: $bp-small) { font-size: 2rem; }
+        }
+        // Text
+        &__text-1 {
+            color: $color-gray-dark-6;
+            font-size: 1.7rem;
+            font-weight: 300;
+            padding-top: 5%;
+            @include underline-2;
+        }
+        // Button
+        &__button {
+            margin-top: 30%;
+            justify-self: flex-end;
+            align-self: flex-start;
+            @media only screen and (max-width: $bp-small) { padding: .7rem; font-size: 1.2rem; }
+        }
+    }
+    // Right side content
+    &__right {
+        display: grid;
+        flex-direction: column;
+        justify-content: flex-start;
+        grid-row: 1 / span 4; 
+        grid-column: 4 / span 2;
+    }
+}
+
+// -- Reservations Box --
+.reservations {
+    // Heading
+    &__heading {
+        font-weight: 400;
+        font-size: 2rem;
+        @media only screen and (max-width: $bp-small) { font-size: 1.4rem; }
+    }
+    // Phone Number
+    &__phone-num {
+        font-size: 3.2rem;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) { font-size: 2.4rem; }
+        @media only screen and (max-width: $bp-small) { font-size: 1.6rem; }
+    }
+}
+
+// -- Lunch Service --
+.lunch-service, .other-service {
+    // Heading
+    &__heading {
+        font-size: 1.7rem;
+        font-weight: 400;
+        @media only screen and (max-width: $bp-small) { font-size: 1.4rem; }
+    }
+    // Text
+    &__text {
+        padding-top: 2%;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $color-gray-dark-6;
+    }
+}

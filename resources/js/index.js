@@ -1,8 +1,6 @@
 // * --- WEBPACK IMPORT FILES --- * \\
 import '../sass/main.scss';
 
-
-
 // -- MODAL IMAGES -- \\
 (() => { // IIFE
     // DOM Elements
@@ -22,4 +20,23 @@ import '../sass/main.scss';
 
     // - EVENT LISTENER - | - Close the image view on button click
     closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+})();
+
+// -- GOOGLE MAPS -- \\
+(() => {
+    let map = new GMaps({
+        div: '.maps',
+        lat: 38.7314786,
+        lng: -9.05,
+        zoom: 12
+    });
+    // Adding Marker (POI)
+    map.addMarker({
+        lat: 38.7287516,
+        lng: -9.1428179,
+        title: 'Washington D.C.',
+          infoWindow: {
+            content: '<p>Our Restaurant</p>'
+          }
+      });
 })();

@@ -1,0 +1,42 @@
+/* -------------------------- */
+/*        - FOOTER -                           
+/* -------------------------- */
+
+// Main footer wrapper
+.footer {
+    position: relative;
+    min-height: 30vh;
+    background-color: $color-gray-dark-8;
+    color: $color-gray-dark-6;
+    overflow: hidden;
+    // Content wrapper
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        > * { padding: 5%; }
+    }
+}
+
+.left {
+    // Text
+    &__text {
+        font-weight: 300;
+    }
+    .span-1 { color: $color-gray-4; }
+}
+
+.center {
+    font-size: 5rem;
+}
+
+.right {
+    display: flex;
+    .small-nav {
+        padding: 0 1rem;
+        color: $color-gray-4;
+        font-weight: 300;
+        cursor: pointer;
+    }
+}

@@ -23,20 +23,16 @@ import '../sass/main.scss';
 })();
 
 // -- GOOGLE MAPS -- \\
+/*
 (() => {
-    let map = new GMaps({
-        div: '.maps',
-        lat: 38.7314786,
-        lng: -9.05,
-        zoom: 12
-    });
-    // Adding Marker (POI)
-    map.addMarker({
-        lat: 38.7287516,
-        lng: -9.1428179,
-        title: 'Washington D.C.',
-          infoWindow: {
-            content: '<p>Our Restaurant</p>'
-          }
-      });
+    // DOM Element - Map div
+    const mapDiv = document.querySelector('.maps');
+    window.addEventListener('load', () =>)
+    let initMaps = () => {
+        map = new google.maps.Map(mapDiv), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+        };
+    }
 })();
+*/

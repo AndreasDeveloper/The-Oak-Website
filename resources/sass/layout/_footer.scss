@@ -9,13 +9,19 @@
     background-color: $color-gray-dark-8;
     color: $color-gray-dark-6;
     overflow: hidden;
+    @media only screen and (max-width: $bp-medium) { min-height: 25vh; }
     // Content wrapper
     &__content {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        > * { padding: 5%; }
+        > * { 
+            padding: 5%;
+            @media only screen and (max-width: $bp-medium) { padding: 10% 1.5%; }
+        }
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) { flex-direction: column; }
     }
 }
 
@@ -29,6 +35,8 @@
 
 .center {
     font-size: 5rem;
+    @media only screen and (max-width: $bp-medium) { font-size: 4rem; }
+    @media only screen and (max-width: $bp-small) { font-size: 5rem; }
 }
 
 .right {

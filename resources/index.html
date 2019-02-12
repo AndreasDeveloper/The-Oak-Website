@@ -459,6 +459,21 @@
     <!-- GOOGLE MAPS | START -->
     <section class="g-maps">
         <div class="maps"></div>
+        <script>
+            // Initialize and add the map
+            function initMaps() {
+              let uluru = {lat: 38.8935755, lng: -77.0846155};
+              let map = new google.maps.Map(document.querySelector('.maps'), {zoom: 12, center: uluru});
+                
+              // Marker 1 position
+              let myLatLng = {lat: 38.904932, lng: -77.036548};
+              let marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: 'Hello World!'
+                });
+            }
+        </script>
     </section>
     <!-- GOOGLE MAPS | END -->
     </main>
@@ -479,5 +494,6 @@
     </footer>
     <!-- FOOTER | END -->
     
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPBdER_G5LddQVm-1l7AS2NklPAApyuds&callback=initMaps"></script>
 </body>
 </html>
